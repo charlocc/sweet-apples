@@ -1,6 +1,6 @@
 -- DROP DATABASE
-DROP DATABASE IF EXISTS moviephone_db;
+DROP DATABASE IF EXISTS gamereview_db;
 
 -- CREATE DATABASE
-CREATE DATABASE moviephone_db;
+CREATE DATABASE gamereview_db;
 
