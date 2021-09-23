@@ -1,0 +1,6 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS moviephone_db;
+
+-- CREATE DATABASE
+CREATE DATABASE moviephone_db;
+
