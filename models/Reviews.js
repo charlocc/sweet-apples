@@ -19,9 +19,6 @@ Reviews.init(
                 key: 'id',
             }, 
         },
-        videogame_name: {
-             type: Datatypes.STRINGS,
-        },
         review_description: {
             type: Datatypes.STRING,
         },

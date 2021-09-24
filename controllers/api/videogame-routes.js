@@ -1,11 +1,30 @@
 const router = require('express').Router();
-const withAuth = require('../../utils/auth');
+const { VideoGame } = require('../../models');
 
-// Create a new project
-router.post('/', withAuth, async (req,res)=> {
+// Get Videogames
+router.get('/', async (req,res)=> {
     try {
-
+        const videogameData = await VideoGame.findAll();
+        res.json(videogameData);
     } catch (err) {
-        res.status(400).json(err)
+        res.status(400).json(err);
     }
 });
+
+// Find by Id
+router.get('/:id', async (req,res) => {
+    
+    try { 
+        const videogameData = await Videogame.findOne({
+        where: {
+            id: req.params.id,
+        },
+    }) 
+    res.json(videogameData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+
+})
+
+module.exports = router;
