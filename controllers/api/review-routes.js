@@ -3,13 +3,14 @@ const { Reviews } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-// Add a new review
-router.post('/', withAuth, async (req,res)=> {
+// Add a new review + ADD WITH AUTH AFTER TESTING
+router.post('/', async (req,res)=> {
     try {
         const newReview = await Reviews.create({
-            review_description: req.body.review_description,
             videogame_id: req.body.videogame_id,
-            user_id: req.session.user_id,
+            review_description: req.body.review_description,
+            // user_id: req.session.user_id,
+            user_id: req.body.user_id,
         });
         res.status(200).json(newReview);
     } catch (err) {
