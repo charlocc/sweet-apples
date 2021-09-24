@@ -1,18 +1,28 @@
 [
     {
-      "name": "Music Near Me",
-      "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-      "needed_funding": 5000
+      "videogame_name": "Halo",
+      "review_description": "This first PErson Shotter paved the way for future video games in the way it stood apart from its competitors.9/10",
+      "user_id": 0
     },
     {
-      "name": "The Ultimate Tech Quiz",
-      "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-      "needed_funding": 10000
+      "videogame_name": "Super Mario Bros",
+      "review_description": "Considerd the GOAT of video game Super MArio Bros will never be forgotten in the video game industry for its consistenct to be amazing.10/10",
+      "user_id": 1
     },
     {
-      "name": "Roll 'Em Up",
-      "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-      "needed_funding": 800
+      "videogame_name": "Call of Duty Modern Warfare",
+      "review_description": "A new take on the MOdern Warefare seris Call of Duty MOdern Warefare hit the ground running with its great graphics and superb gameplay.8.5/10",
+      "user_id": 2
+    },
+    {
+      "videogame_name": "Gutair Hero",
+      "review_description": "Gutair HEro was the first of its kind to add a well functioning way of playing instuments in a video game with other games trying to imitate it but not getting as close 8/10.",
+      "user_id": 3
+    },
+    {
+      "videogame_name": "Wii Sports",
+      "review_description": "Competing in sports has been a tradition in many generations, but now it is introduced in video games and did it perfectly through wii sports.7.5/10",
+      "user_id": 4
     }
   ]
   
