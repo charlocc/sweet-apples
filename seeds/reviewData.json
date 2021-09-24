@@ -1,28 +1,18 @@
 [
     {
-      "videogame_name": "Halo",
-      "review_description": "This first PErson Shotter paved the way for future video games in the way it stood apart from its competitors.9/10",
-      "user_id": 0
+      "videogame_id": 0
     },
     {
-      "videogame_name": "Super Mario Bros",
-      "review_description": "Considerd the GOAT of video game Super MArio Bros will never be forgotten in the video game industry for its consistenct to be amazing.10/10",
-      "user_id": 1
+      "videogame_id": 1
     },
     {
-      "videogame_name": "Call of Duty Modern Warfare",
-      "review_description": "A new take on the MOdern Warefare seris Call of Duty MOdern Warefare hit the ground running with its great graphics and superb gameplay.8.5/10",
-      "user_id": 2
+      "videogame_id": 2
     },
     {
-      "videogame_name": "Gutair Hero",
-      "review_description": "Gutair HEro was the first of its kind to add a well functioning way of playing instuments in a video game with other games trying to imitate it but not getting as close 8/10.",
-      "user_id": 3
+      "videogame_id": 3
     },
     {
-      "videogame_name": "Wii Sports",
-      "review_description": "Competing in sports has been a tradition in many generations, but now it is introduced in video games and did it perfectly through wii sports.7.5/10",
-      "user_id": 4
+      "videogame_id": 4
     }
   ]
   
