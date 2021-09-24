@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Reviews , VideoGame, User } = require('../../models');
+const { Reviews } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // router.get('/', (req, res) => {
 //     Reviews.findAll({
-//         indclude: [
+//         include: [
 //             {
 //                 model: VideoGame,
 //                 attribute: videogame_name,
@@ -30,3 +30,5 @@ router.post('/', withAuth, async (req,res)=> {
         res.status(400).json(err);
     }
 });
+
+module.exports = router;

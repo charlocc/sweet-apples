@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const { Reviews, VideoGame, User } = require('../models');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../utils/auth');
 
 // Get all reviews
 router.get('/', withAuth, async (req, res) => {
     try {
         const reviewData = await Reviews.findAll({
-            indclude: [
+            include: [
                 {
                     model: VideoGame,
                     attribute: videogame_name,
@@ -33,7 +33,7 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/reviews/:id', async (req, res) => {
     try {
       const reviewData = await Reviews.findByPk(req.params.id, {
-        indclude: [
+        include: [
             {
                 model: VideoGame,
                 attribute: videogame_name,
@@ -57,12 +57,12 @@ router.get('/reviews/:id', async (req, res) => {
   });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        indclude: [
+        include: [
             {
                 model: VideoGame,
                 attribute: videogame_name,
@@ -84,3 +84,5 @@ router.get('/profile', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+module.exports = router;

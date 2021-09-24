@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, Datatypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
@@ -7,13 +7,13 @@ class VideoGame extends Model {}
 VideoGame.init(
     {
         id: {
-            type: DataTypes.INTEGER,
+            type: Datatypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
         videogame_name: {
-            type: DataTypes.STRING,
+            type: Datatypes.STRING,
         },
     },
     {
