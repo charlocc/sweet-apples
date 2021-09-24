@@ -9,11 +9,11 @@ router.get('/', withAuth, async (req, res) => {
             include: [
                 {
                     model: VideoGame,
-                    attribute: videogame_name,
+                    attributes: [videogame_name],
                 },
                 {
                     model: User,
-                    attribute: username,
+                    attributes: [username],
                 }
             ]
         });
@@ -21,11 +21,11 @@ router.get('/', withAuth, async (req, res) => {
 
         res.render('dashboard', { 
             reviews, 
-            logged_in: req.session.logged_in 
+            loggedIn: req.session.loggedIn 
           });
 
     } catch (err) {
-        res.status(400).json(err)
+        res.status(500).json(err)
     }
 });
 
@@ -49,7 +49,7 @@ router.get('/reviews/:id', async (req, res) => {
   
       res.render('review', {
         ...review,
-        logged_in: req.session.logged_in
+        loggedIn: req.session.loggedIn
       });
     } catch (err) {
       res.status(500).json(err);
@@ -78,7 +78,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   
       res.render('profile', {
         ...user,
-        logged_in: true
+        loggedIn: true
       });
     } catch (err) {
       res.status(500).json(err);

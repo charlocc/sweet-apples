@@ -2,20 +2,6 @@ const router = require('express').Router();
 const { Reviews } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// router.get('/', (req, res) => {
-//     Reviews.findAll({
-//         include: [
-//             {
-//                 model: VideoGame,
-//                 attribute: videogame_name,
-//             },
-//             {
-//                 model: User,
-//                 attribute: username,
-//             }
-//         ]
-//     })
-// })
 
 // Add a new review
 router.post('/', withAuth, async (req,res)=> {
