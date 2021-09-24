@@ -23,3 +23,5 @@ Reviews.belongsTo(VideoGame, {
 VideoGame.hasMany(Reviews, {
     foreignKey: 'reviews_id'
 });
+
+module.exports = { User, Reviews, VideoGame };
