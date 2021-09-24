@@ -1,21 +1,21 @@
 const router = require('express').Router();
-const { Reviews , Videogame, User } = require('../../models');
+const { Reviews , VideoGame, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', (req, res) => {
-    Reviews.findAll({
-        indclude: [
-            {
-                model: Videogame,
-                attribute: videogame_name,
-            },
-            {
-                model: User,
-                attribute: username,
-            }
-        ]
-    })
-})
+// router.get('/', (req, res) => {
+//     Reviews.findAll({
+//         indclude: [
+//             {
+//                 model: VideoGame,
+//                 attribute: videogame_name,
+//             },
+//             {
+//                 model: User,
+//                 attribute: username,
+//             }
+//         ]
+//     })
+// })
 
 // Add a new review
 router.post('/', withAuth, async (req,res)=> {

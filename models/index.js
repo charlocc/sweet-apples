@@ -7,3 +7,5 @@ const VideoGame = require('./Videogame')
 Reviews.belongsTo(User, {
     foreignKey: 'user_id',
 });
+
+module.exports = { User, Reviews, VideoGame };

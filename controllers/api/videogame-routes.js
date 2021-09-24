@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Videogame } = require('../../models');
+const { VideoGame } = require('../../models');
 
 // Get Videogames
-router.get('/', withAuth, async (req,res)=> {
+router.get('/', async (req,res)=> {
     try {
-        const videogameData = await Videogame.findAll();
+        const videogameData = await VideoGame.findAll();
         res.json(videogameData);
     } catch (err) {
         res.status(400).json(err);
@@ -12,7 +12,7 @@ router.get('/', withAuth, async (req,res)=> {
 });
 
 // Find by Id
-router.get('/:id', withAuth, async (req,res) => {
+router.get('/:id', async (req,res) => {
     
     try { 
         const videogameData = await Videogame.findOne({
