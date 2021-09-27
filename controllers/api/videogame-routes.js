@@ -11,20 +11,5 @@ router.get('/', async (req,res)=> {
     }
 });
 
-// Find by Id
-router.get('/:id', async (req,res) => {
-    
-    try { 
-        const videogameData = await VideoGame.findOne({
-        where: {
-            id: req.params.id,
-        },
-    }) 
-    res.json(videogameData);
-    } catch (err) {
-        res.status(400).json(err);
-    }
-
-})
 
 module.exports = router;
