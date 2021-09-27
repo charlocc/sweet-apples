@@ -9,8 +9,8 @@ router.post('/', async (req,res)=> {
         const newReview = await Reviews.create({
             videogame_id: req.body.videogame_id,
             review_description: req.body.review_description,
-            // user_id: req.session.user_id,
-            user_id: req.body.user_id,
+            user_id: req.session.user_id,
+            // user_id: req.body.user_id,
         });
         res.status(200).json(newReview);
     } catch (err) {
