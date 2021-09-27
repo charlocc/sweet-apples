@@ -14,19 +14,15 @@
 <body>
     <div class="flex-column justify-space-around">
         <header class="display-flex align-center p-2 bg-darkred">
-            <nav class="navbar navbar-expand-lg ">
+            <nav class="navbar navbar-expand">
                 <h1>Sweet Apples</h1>
-                {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> --}}
                 <div class="collapse navbar-collapse text-align" id="navbarText">
                     <ul class="navbar-nav mr-auto navitem">
                         <li class="nav-item active navitem">
                             {{#if loggedIn}}
-                            <a href="/">Home</a> |
-                            <a href="/dashboard"> Dashboard</a> |
-                            <a href="/" id="logout"> Logout</a>
+                            <a href="/">Home</a> | 
+                            <a href="/dashboard">  Dashboard</a> |
+                            <a href="/" id="logout">  Logout</a>
                             {{else}}
                             <a href="/">Home</a> |
                             <a href="/login">Login</a>
