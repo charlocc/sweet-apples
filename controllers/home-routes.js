@@ -2,32 +2,27 @@ const router = require('express').Router();
 const { Reviews, VideoGame, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Get all reviews - ADD WITH AUTH AFTER TESTING
+// Get homepage
 router.get('/', async (req, res) => {
   try {
-    const reviewData = await Reviews.findAll({
-      include: [
-        {
-          model: VideoGame
-        },
-        {
-          model: User
-        },
-      ]
-    });
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
-
-    // res.render('dashboard', { 
-    //     reviews, 
-    //     loggedIn: req.session.loggedIn 
-    //   });
-    res.json(reviews);
-
-
+    res.render('homepage', { 
+        loggedIn: req.session.loggedIn 
+      });
+    res.status(200);
   } catch (err) {
     res.status(500).json(err)
   }
 });
+
+// Get the login page
+router.get('/login', async (req,res) => {
+  try {
+    res.render('login')
+  } catch (err) {
+    res.status(500).json(err)
+  }
+}); 
+
 
 // Get review by ID
 router.get('/reviews/:id', async (req, res) => {
@@ -45,10 +40,10 @@ router.get('/reviews/:id', async (req, res) => {
 
     const review = reviewData.get({ plain: true });
 
-    // res.render('review', {
-    //   ...review,
-    //   loggedIn: req.session.loggedIn
-    // });
+    res.render('review', {
+      ...review,
+      loggedIn: req.session.loggedIn
+    });
     res.json(review);
   } catch (err) {
     res.status(500).json(err);
@@ -63,22 +58,30 @@ router.get('/dashboard', async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [
         {
-          model: VideoGame
-        },
-        {
-          model: User
+          model: Reviews
         }
       ]
     });
 
     const user = userData.get({ plain: true });
 
-    // res.render('dashboard', {
-    //   ...user,
-    //   loggedIn: true
-    // });
+    const reviewData = await Reviews.findAll({
+      include: [
+        {
+          model: VideoGame
+        },
+        {
+          model: User
+        },
+      ]
+    });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
-    res.json(user);
+    res.render('dashboard', {
+      ...user, 
+      ...reviews,
+      loggedIn: req.session.loggedIn
+    });
 
   } catch (err) {
     res.status(500).json(err);
