@@ -24,4 +24,4 @@ VideoGame.hasMany(Reviews, {
     foreignKey: 'videogame_id'
 });
 
-module.exports = { User, Reviews, VideoGame };
+module.exports = { User, Reviews, VideoGame }; 
