@@ -1,16 +1,63 @@
 :root{
     --darkred: #8D0304;
     --lightred: #FF2828;
+    --offwhite: #f9f8f3;
 }
 
-ul{
+body{
+    background-color: var(--offwhite);
+}
+
+header{
+    color: var(--offwhite);
+}
+
+h1{
+   font-weight: 900px; 
+}
+
+ul {
    list-style:none;
    font-size: 20px;
+   
 }
 
-ul, a{
-    color: var(--darkred);
+a{
+    text-decoration: none;
+    color: var(--offwhite);
 }
+
+a:hover{
+    color: var(--lightred);
+}
+
+
+.navitem{
+    width: 100%;
+    display: flex; 
+    justify-content: space-around; 
+    color: var(--offwhite);
+}
+
+
+.darkredtext{
+    color: var(--darkred); 
+}
+
 .reviews-list{
     color: var(--darkred);
+}
+
+.videogames-list{
+    width: 70%;
+    justify-content: space-around;
+}
+
+.review-card{
+    border: solid 2px var(--darkred);
+    border-radius: 9px;
+}
+
+.bg-darkred{
+    background-color: var(--darkred);
 }

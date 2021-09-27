@@ -24,32 +24,6 @@ router.get('/login', async (req, res) => {
 });
 
 
-// Get review by ID
-// router.get('/reviews/:id', async (req, res) => {
-//   try {
-//     const reviewData = await Reviews.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: VideoGame
-//         },
-//         {
-//           model: User
-//         }
-//       ]
-//     });
-
-//     const review = reviewData.get({ plain: true });
-
-//     res.render('review', {
-//       ...review,
-//       loggedIn: req.session.loggedIn
-//     });
-//     res.json(review);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', async (req, res) => {
   try {
@@ -70,8 +44,6 @@ router.get('/dashboard', async (req, res) => {
     const videogames = videoGameData.map((videogame) => videogame.get({ plain: true }));
 
     res.render('dashboard', {
-      // ...user, 
-      // ...reviews,
       videogames,
       loggedIn: req.session.loggedIn
     });

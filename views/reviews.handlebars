@@ -1,8 +1,16 @@
-<div class="text-center">
-    <h1>{{videogame.videogame_name}}</h1>
-    <ul class="reviews-list">
-        {{#each videogame.reviews as |review|}}
-        <li>{{> reviewcard}} </li>
-        {{/each}}
-    </ul>
+<div class="container">
+    <div class="row">
+        <div class="col-8 text-center">
+            <h1>{{videogame.videogame_name}}</h1>
+            <ul class="reviews-list">
+                {{#each videogame.reviews as |review|}}
+                <li>{{> reviewcard}} </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-3 text-center">
+            <h2>Add a review</h2>
+            <button> + </button>
+        </div>
+    </div>
 </div>
