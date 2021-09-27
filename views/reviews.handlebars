@@ -1,0 +1,8 @@
+<div class="text-center">
+    <h1>{{videogame.videogame_name}}</h1>
+    <ul class="reviews-list">
+        {{#each videogame.reviews as |review|}}
+        <li>{{> reviewcard}} </li>
+        {{/each}}
+    </ul>
+</div>
