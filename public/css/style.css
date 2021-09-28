@@ -71,6 +71,8 @@ a:hover{
 }
 
 .gameli{
+    display: flex;
+  justify-content: space-between;
     background-color: var(--darkred);
     border: solid 2px var(--lightred);
     padding: 2px;
