@@ -31,8 +31,12 @@ router.get('/dashboard', async (req, res) => {
     const videoGameData = await VideoGame.findAll();
     const videogames = videoGameData.map((videogame) => videogame.get({ plain: true }));
 
+  const videogameFile = videoGameData.map(videogame => videogame.videogame_name.toLowerCase().replace(" ",""))
+  const zip = (a, b) => a.map((h, i) => ({ data: h, file: b[i] }));
+  const videogameArray = zip(videogames,videogameFile)
+  // const videogameObjectArray = videogameArray.map((videogame) => videogame.get({ plain: true, }));
     res.render('dashboard', {
-      videogames,
+     videogameArray,
       loggedIn: req.session.loggedIn
     });
 
