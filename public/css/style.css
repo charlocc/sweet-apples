@@ -49,7 +49,7 @@ a:hover{
 }
 
 .videogames-list{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -79,6 +79,10 @@ a:hover{
     margin: 2%;
     border-radius: 9px;
     justify-content: center;
+}
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .bgimg {
