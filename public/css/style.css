@@ -50,6 +50,8 @@ a:hover{
 
 .videogames-list{
     width: 70%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -62,12 +64,23 @@ a:hover{
     background-color: var(--darkred);
 }
 
+.box {
+    display: flex;
+    flex-wrap: flex;
+    
+}
+
 .gameli{
     background-color: var(--darkred);
     border: solid 2px var(--lightred);
     padding: 2px;
     margin: 2%;
     border-radius: 9px;
+    justify-content: center;
+}
+
+.bgimg {
+    width: 40%;
 }
 
 
