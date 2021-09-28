@@ -1,4 +1,4 @@
-<div class="text-center videogames-list container">
+{{!-- <div class="text-center videogames-list container">
     <div class="row">
     <h2> Choose a Video Game to see how other users reviewed the game, or to add your own review! </h2>
     <ul>
@@ -8,6 +8,18 @@
         {{/each}}
     </ul>
     </div>
-</div>
+</div> --}}
 
-
+<div class="text-center videogames-list container">
+    <div class="row">
+        <h2> Choose a Video Game to see how other users reviewed the game, or to add your own review! </h2>
+        <ul>
+            {{#each videogameArray as |videogame|}}
+            <li class="gameli">
+                <a href="/videogames/{{videogame.data.id}}">{{videogame.data.videogame_name}}</a>
+            <img src ="/images/{{videogame.file}}.jpeg" alt = {{videogame.file}}> </img>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div> 
