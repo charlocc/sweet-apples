@@ -21,8 +21,18 @@
     },
     {
       "videogame_id": 4,
-      "review_description": "i loved it!",
+      "review_description": "I loved it! It inspired my love of classic rock",
       "user_id": 4
+    },
+    {
+      "videogame_id": 5,
+      "review_description": "This is a great way to stay active!",
+      "user_id": 4
+    },
+    {
+      "videogame_id": 3,
+      "review_description": "I like wii bowling the most of all of the games",
+      "user_id": 2
     }
   ]
   
