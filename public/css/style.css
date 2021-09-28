@@ -62,6 +62,15 @@ a:hover{
     background-color: var(--darkred);
 }
 
+.gameli{
+    background-color: var(--darkred);
+    border: solid 2px var(--lightred);
+    padding: 2px;
+    margin: 2%;
+    border-radius: 9px;
+}
+
+
 @media screen and (max-width:768px) {
     nav{
         flex-direction: column;

@@ -17,4 +17,22 @@ router.post('/', async (req,res)=> {
     }
 });
 
+
+router.delete('/:id', async (req,res) => {
+    try{
+        if (req.body.userid = req.sessions.user_id) {
+            const deleteReview = await Reviews.destroy({
+                where:{
+                    id: req.params.id,
+                }
+            })
+            res.status(200).json(deleteReview);
+        }
+        res.status(400).json({ failed: "You don't have authorization to delete this review."})
+    } catch(err) {
+        res.status(400).json(err);
+    }
+})
+
+
 module.exports = router;

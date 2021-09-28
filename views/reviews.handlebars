@@ -4,7 +4,7 @@
             <h1>{{videogame.videogame_name}}</h1>
             <ul class="reviews-list">
                 {{#each videogame.reviews as |review|}}
-                <li>{{> reviewcard}} </li>
+                <li id={{review.id}} data-user-id={{review.user.id}}>{{> reviewcard}}</li>
                 {{/each}}
             </ul>
         </div>
