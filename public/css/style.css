@@ -77,6 +77,7 @@ a:hover{
     margin: 2%;
     border-radius: 9px;
     justify-content: center;
+    width: 25%;
 }
 .game-list {
     display: flex;
@@ -84,7 +85,8 @@ a:hover{
 }
 
 .bgimg {
-    width: 40%;
+    height: 90%;
+    padding: 2%;
 }
 
 
@@ -94,3 +96,10 @@ a:hover{
         justify-content: space-around;
     }
  }
+
+@media screen and (max-width:768px){
+.gameli{
+    width: 100%;
+}
+}
+
