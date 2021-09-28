@@ -53,6 +53,8 @@ router.post('/logout', (req,res)=>{
     // if the user is currently logged in, then the session is destroyed
     if (req.session.loggedIn) {
         req.session.destroy(() => {
+            console.log('hello');
+            console.log(req.session);
             res.status(204).end();
         });
     } else {

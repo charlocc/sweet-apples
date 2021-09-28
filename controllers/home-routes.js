@@ -24,6 +24,7 @@ router.get('/login', async (req, res) => {
 });
 
 
+
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', async (req, res) => {
   try {
@@ -59,10 +60,19 @@ router.get('/videogames/:id', async (req, res) => {
   try {
 
     const videogameData = await VideoGame.findByPk(req.params.id, {
-      include: [Reviews]
+      include: [
+        {
+          model: Reviews,
+          include: [
+            {
+              model: User
+            }
+          ]
+        }
+      ]
     })
     const videogame = videogameData.get({ plain: true });
-
+    console.log(videogame.reviews[0].user);
 
     res.render('reviews', {
       videogame,
