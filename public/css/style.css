@@ -95,11 +95,13 @@ a:hover{
         flex-direction: column;
         justify-content: space-around;
     }
- }
+}
 
 @media screen and (max-width:768px){
-.gameli{
-    width: 100%;
+    .gameli{
+        width: 100%;
+    }
 }
-}
+
+
 
