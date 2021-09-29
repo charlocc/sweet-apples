@@ -1,3 +1,4 @@
+// Add a review
 const newFormHandler = async (event) => {
   event.preventDefault();
   var vidId = document.location.pathname
@@ -21,6 +22,7 @@ const newFormHandler = async (event) => {
   }
 };
 
+// Delete a Review
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');

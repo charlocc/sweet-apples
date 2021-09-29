@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
 });
 
 
-
+// Only allow users who posted the review to delete it
 router.delete('/:id', async (req, res) => {
     try {
         const deleteReview = await Reviews.destroy({
