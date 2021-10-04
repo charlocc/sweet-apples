@@ -1,6 +1,8 @@
 # Sweet Apples!
 Sweet Apples is a user friendly website targeted to an audience that loves videogames! The site allows users to view and write reviews for video games
 
+[Sweet Apples](https://ancient-plains-02897.herokuapp.com/)
+
 Created by Charlotte Clark, Kevin Tran, and Stephen Ryan
 
 ![websitefrontpage](sweetapples.png)
@@ -22,13 +24,19 @@ When this Website loads in you will be shown the title of the site labeled "Swee
 
 ![websitefrontpage](dashboardscreen.png)
 
+## Languages
 
-This webstie was created using five main coding languages, those being Javascript, HTML, CSS, MySQL, Handlebars, and lastly Json
+* JavaScript
+* HTML
+* CSS
+* MySQL
+* Handlebars.js
 
-
-[Sweet Apples](https://ancient-plains-02897.herokuapp.com/)
+## Questions
 
 Please contact charlotte.clark@alumni.usc.edu with any questions.
+
+## Licensing
 
 Copyright 2021 Charlotte Clark, Kevin Tran, Stephen Ryan
 
