@@ -19,13 +19,12 @@ When this Website loads in you will be shown the title of the site labeled "Swee
 
 * When you click on one of these video games you will see previous reviews as well as give you an option to write your own review that you can delete if you choose to
 
-Below is a screenshot of the dashboard page with the intital video games
+
 ![websitefrontpage](dashboardscreen.png)
 
 
 This webstie was created using five main coding languages, those being Javascript, HTML, CSS, MySQL, Handlebars, and lastly Json
 
-Below is a link to the finsihed website!
 
 [Sweet Apples](https://ancient-plains-02897.herokuapp.com/)
 
