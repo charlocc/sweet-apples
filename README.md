@@ -1,5 +1,5 @@
 # Sweet Apples!
-Sweet Apples is a user friendly website targeted to an audience that loves videogames! The site allows users to view and write reviews for video games
+Sweet Apples is a site that allows users to view and write reviews for video games
 
 [Sweet Apples](https://ancient-plains-02897.herokuapp.com/)
 
@@ -30,7 +30,9 @@ When this Website loads in you will be shown the title of the site labeled "Swee
 * HTML
 * CSS
 * MySQL
+* Sequelize
 * Handlebars.js
+* Heroku deployment
 
 ## Questions
 
