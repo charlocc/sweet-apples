@@ -24,7 +24,7 @@ When this Website loads in you will be shown the title of the site labeled "Swee
 
 ![websitefrontpage](dashboardscreen.png)
 
-## Languages
+## Technologies
 
 * JavaScript
 * HTML
@@ -32,7 +32,8 @@ When this Website loads in you will be shown the title of the site labeled "Swee
 * MySQL
 * Sequelize
 * Handlebars.js
-* Heroku deployment
+* Heroku 
+* bcrypt
 
 ## Questions
 
